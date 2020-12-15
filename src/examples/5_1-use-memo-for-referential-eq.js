@@ -14,8 +14,8 @@ const App = () => {
   useEffect(() => {
     const handleEmailFetch = async () => {
       console.log('Fetching email')
-      const count = await getUnreadEmailCount(firstName)
-      setUnreadEmailCount(count, fetchOpts)
+      const count = await getUnreadEmailCount(firstName, fetchOpts)
+      setUnreadEmailCount(count)
     }
 
     handleEmailFetch()
