@@ -18,7 +18,7 @@ const App = () => {
     }
 
     handleEmailFetch()
-  }) // TODO Updates with dark mode, which is unwanted. Pls fix!
+  }) // TODO Updates with dark mode, which is unwanted. Pls fix by passing a second parameter, an array of dependencies, [firstName]!
 
   return (
     <div className={darkModeOn ? 'dark' : ''}>

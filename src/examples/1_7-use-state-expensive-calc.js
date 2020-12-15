@@ -11,7 +11,7 @@ const calculateExpensiveInitialState = name => {
 
 const App = () => {
   // Lazy initializer
-  const [firstName, setFirstName] = useState(calculateExpensiveInitialState('Lisa')) // TODO heavy calculation
+  const [firstName, setFirstName] = useState(calculateExpensiveInitialState('Lisa')) // TODO heavy calculation, pass a function to useState, useState(() => yourFn())
 
   const handleNameChange = e => {
     setFirstName(e.target.value)

@@ -13,7 +13,7 @@ const App = () => {
   const [firstName, setFirstName] = useState('Lisa')
   const [darkModeOn, setDarkModeOn] = useState(false)
   const [unreadEmailCount, setUnreadEmailCount] = useState()
-  const fetchOpts = getComplicatedOpts(firstName) // TODO only recreate based on dependencies
+  const fetchOpts = getComplicatedOpts(firstName) // TODO only recreate based on dependencies by wrapping it to useMemo()
   // Don't memoize everything, results into extra function calls and increased memory usage
 
   // Remember: re-rendering a React component is different from having the browser repainting the screen

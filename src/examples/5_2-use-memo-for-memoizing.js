@@ -13,7 +13,7 @@ const App = () => {
   const [firstName, setFirstName] = useState('Lisa')
   const [darkModeOn, setDarkModeOn] = useState(false)
   const [unreadEmailCount, setUnreadEmailCount] = useState()
-  const fetchOpts = getComplicatedOpts(firstName) // TODO only recreate based on dependencies
+  const fetchOpts = getComplicatedOpts(firstName) // TODO only recreate based on dependencies by wrapping to useMemo and having firstName as a dependency
 
   const handleNameChange = e => setFirstName(e.target.value)
   const handleCheckboxChange = () => setDarkModeOn(!darkModeOn)

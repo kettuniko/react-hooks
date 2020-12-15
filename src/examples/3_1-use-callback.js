@@ -19,7 +19,7 @@ const App = () => {
     handleEmailFetch()
   }, [firstName])
 
-  const closeOnEscPress = event => { // TODO stable function needed
+  const closeOnEscPress = event => { // TODO stable function needed, wrap in useCallback. Remember to add dependencies, which is an empty array
     if (event.key === 'Escape') {
       setShowUnread(false)
     }

@@ -6,7 +6,7 @@ const App = () => {
   const [firstName, setFirstName] = useState('Lisa')
   const [darkModeOn, setDarkModeOn] = useState(false)
   const [unreadEmailCount, setUnreadEmailCount] = useState()
-  const fetchOpts = { token: 'asd' } // TODO "unstable"
+  const fetchOpts = { token: 'asd' } // TODO "unstable", wrap in useMemo with an empty dependency array
 
   const handleNameChange = e => setFirstName(e.target.value)
   const handleCheckboxChange = () => setDarkModeOn(!darkModeOn)

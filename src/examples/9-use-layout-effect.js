@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react'
 
 const MessagesDisplay = ({ messages }) => {
   const containerRef = useRef()
-  useEffect(() => { // TODO useLayoutEffect
+  useEffect(() => { // TODO useLayoutEffect instead
     containerRef.current.scrollTop = containerRef.current.scrollHeight
   })
 
