@@ -8,7 +8,7 @@ const App = () => {
   const [state, setState] = useState({firstName: 'Lisa', lastName: 'Smith'})
   const {firstName, lastName} = state
 
-  // Difference to class component setState is that it does merging by default
+  // Difference to class component setState is that the class equivalent does merging by default
   const handleNameChange = e => {
     setState({...state, firstName: e.target.value})
   }
