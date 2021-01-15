@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useMemo } from 'react'
 import { getUnreadEmailCount } from './api'
 import './App.css'
 
@@ -13,7 +13,7 @@ const App = () => {
   const [firstName, setFirstName] = useState('Lisa')
   const [darkModeOn, setDarkModeOn] = useState(false)
   const [unreadEmailCount, setUnreadEmailCount] = useState()
-  const fetchOpts = getComplicatedOpts(firstName) // TODO only recreate based on dependencies by wrapping it to useMemo()
+  const fetchOpts = useMemo(() => getComplicatedOpts(firstName), [firstName])
   // Don't memoize everything, results into extra function calls and increased memory usage
 
   // Remember: re-rendering a React component is different from having the browser repainting the screen

@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useLayoutEffect, useRef } from 'react'
 
 const MessagesDisplay = ({ messages }) => {
   const containerRef = useRef()
